@@ -7,11 +7,15 @@
     <div>
       <h1>It lives!</h1>
     </div>
+    
     <div>
-      <h2>It's aliiiiiive!</h2>
-      <p>~I am frankenstein's monsterrrrr</p>
-      <p>Published: 12.03.2016, 12:00</p>
-      <p>Author: NotAnonymous</p>
+      {% for post in posts %}
+        <div>
+          <h2><a href="">{{ post.title }}</a></h2>
+          <p>Published: {{ post.published_date }}</p>
+          <p>{{ post.text|linebreaksbr }}</p>
+        </div>
+      {% endfor %}
     </div>
-</body>
+  </body>
 </html>
